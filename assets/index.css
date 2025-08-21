@@ -701,7 +701,12 @@ flex-direction: column;
   }
   
 }
-
+@media (max-width: 420px) {
+  
+ .contact-right-title {
+  font-size: 2.5rem;
+}
+}
 
 @media (max-width: 768px) {
   :root { --headerHeight: 100px;}
@@ -793,7 +798,8 @@ flex-direction: column;
   .home-section {
     margin-top: 70px;
   }
-  .home-title { font-size: 2.8rem; }
+  .home-title { font-size: 2.8rem;
+  height: 100%; }
   .btn-link { font-size: 1.8rem; }
   .left-contact {
     display: none;
@@ -823,7 +829,7 @@ flex-direction: column;
   font-size: 1.6rem;
 }
 .contact-right-title {
-  font-size: 3rem;
+  font-size: 2.7rem;
 }
 }
 
