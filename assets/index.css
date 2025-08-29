@@ -25,9 +25,9 @@ html, body {
 
 :root {
   --accentColor: #A60506;          /* Основной цвет (бордовый) */
-  --whiteTextColor: #fff;          /* Белый текст/фоны */
-  --blackTextColor: #404040;       /* Тёмно-серый цвет для фона/текста */
-  --bgColor: #D9D9D9;              /* Общий фон страницы */
+  --whiteTextColor: #ffffff;          /* Белый текст/фоны */
+  --blackTextColor: #3d3d3d;       /* Тёмно-серый цвет для фона/текста */
+  --bgColor: #ffffff;              /* Общий фон страницы */
   --labelColor: #C1C0C0;           /* Цвет подсказок */
   --headerHeight: 100px;           /* Высота хедера */
   --transition: all .3s;           /* Универсальная анимация */
@@ -49,7 +49,7 @@ body {
 .header {
   width: 100%;
   height: var(--headerHeight);
-  background-color: var(--blackTextColor);
+  background-color: #2E5E4E;
   position: fixed;
   top: 0;
   left: 0;
@@ -81,22 +81,24 @@ body {
   white-space: nowrap;
   text-align: center;
   z-index: 1;
-  background-color: var(--blackTextColor);
+  background-color: #2E5E4E;
   padding: 0 15px;
 }
-
+h5 {
+  font-weight: 300;
+}
 .header__phone-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  background-color: #a60506;
+  color: #2E5E4E;
+  background-color: #ffffff;
   font-size: 1.4rem;
   font-weight: 600;
   text-decoration: none;
   padding: 14px 24px;
   border-radius: 30px;
-  box-shadow: 0 4px 14px rgba(166, 5, 6, 0.4);
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.4);
   transition: all 0.3s ease;
   min-width: 200px;
   text-align: center;
@@ -106,8 +108,8 @@ body {
 }
 
 .header__phone-btn:hover {
-  background-color: #8b0405;
-  box-shadow: 0 6px 18px rgba(166, 5, 6, 0.5);
+  background-color: #a5a5a5;
+  box-shadow: 0 6px 18px rgba(145, 145, 145, 0.5);
   transform: translateY(-3px);
 }
 
@@ -155,98 +157,146 @@ body {
   justify-content: center;
   font-size: 3.5rem;
   font-weight: 800;
-}
-
-.btn-link {
-  width: 300px;
-  text-align: center;
-  background-color: var(--accentColor);
-  font-size: 2rem;
-  padding: 10px;
-  color: var(--whiteTextColor);
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 8px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-left: 150px;
 }
 
 .home-title {
   height: 40%;
   max-width: 100%;
   color: var(--whiteTextColor) !important;
-  background: linear-gradient(90deg, rgba(0,0,0,0) 43%, rgba(166,5,6,1) 43%);
+
 }
 
 .home-img-container {
-  height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  flex-direction: row;
+}
+
+.header__phone-btn2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 30px;
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+  min-width: 200px;
+  text-align: center;
+  z-index: 2;
+  white-space: nowrap;
+background-color: rgba(255, 255, 255, 0.459);  
+    cursor: pointer;  
+    border: none;  
+    outline: none;  
+  margin: 30px;
+}
+.header__phone-btn2:hover {
+  background-color: #cecece;
+  box-shadow: 0 6px 18px rgba(145, 145, 145, 0.5);
+  transform: translateY(-3px);
+ 
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 300;
+  margin-top: 20px;
 }
 
 
 /* ======================================== */
 /* 5. КАРТОЧКИ (4 блока с иконками)         */
 /* ======================================== */
-
-
 .cards-section {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
-  gap: 30px;
-  padding: 80px 20px;
-  margin-top: 40px;
-  background-color: #f9f9f9;
+  padding: 0px;
 }
+.service-process-wrapper {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #333;
+  }
 
-.home-card {
-  flex: 1 1 280px; /* Гибкая ширина, минимум 280px */
-  min-height: 400px;
-  padding: 25px;
-  background-color: var(--whiteTextColor);
-  color: var(--blackTextColor);
-  border-radius: 16px;
-  box-shadow: 
-    0 10px 20px rgba(0, 0, 0, 0.1),
-    0 4px 6px rgba(0, 0, 0, 0.05);
-  border: 1px solid #eaeaea;
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
+  .service-process-title {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 16px;
+    color: #2E5E4E;
+  }
 
-.home-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 
-    0 14px 28px rgba(0, 0, 0, 0.15),
-    0 6px 8px rgba(0, 0, 0, 0.1);
-  border-color: #d0d0d0;
-}
+  .service-process-subtitle {
+    font-size: 1.4rem;
+    text-align: center;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
 
-.home-card__img {
-  display: block;
-  margin: 0 auto 20px;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-  width: 150px;
-  height: 150px;
-  object-fit: contain;
-}
+  .service-process-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
 
-.home-card__text {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  font-size: 1.3rem;
-  line-height: 1.6;
-  color: var(--blackTextColor);
-  letter-spacing: 0.3px;
-  margin: 0;
-}
+  .step-card {
+    background: #f9f9f9;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    width: calc(33.333% - 20px);
+    min-width: 280px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .step-card h4 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    color: #2c3e50;
+  }
+
+  .step-card .text {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  @media (max-width: 992px) {
+    .step-card {
+      width: calc(50% - 20px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .service-process-title {
+      font-size: 28px;
+    }
+    .service-process-subtitle {
+      font-size: 16px;
+    }
+    .step-card {
+      width: 100%;
+      padding: 20px;
+    }
+  }
+
+
 
 
 /* ======================================== */
@@ -254,59 +304,102 @@ body {
 /* ======================================== */
 
 .services-section {
-  padding: 50px 0;
-}
+    padding: 80px 0;
+    background-color: #fff;
+    color: #333;
+  }
 
-.services-title {
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: var(--blackTextColor);
-  text-align: center;
-  margin-bottom: 50px;
-}
+  .services-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #2C2C2C;
+    text-align: center;
+    margin-bottom: 20px;
+  }
 
-.services-card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin: 0 auto;
-  max-width: 1200px;
-}
+  .services-subtitle {
+    font-size: 2rem;
+    color: #666;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+    line-height: 1.6;
+  }
 
-.card {
-  width: 350px;
-  min-height: 300px;
-  padding: 25px;
-  background-color: var(--whiteTextColor);
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
 
-.card:hover {
-  transform: translateY(-5px);
-}
+  /* Карточка услуги */
+  .service-card {
+    background: #F9F9F9;
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    padding: 30px 25px 25px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+  }
 
-.card__img {
-  max-width: 100%;
-  height: 200px;
-  object-fit: cover;
-  margin-bottom: 15px;
-  border-radius: 8px;
-}
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  }
 
-.card__text {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--blackTextColor);
-  margin: 0;
-}
+  /* Стрелка в правом верхнем углу */
+  .arrow-icon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 28px;
+    height: 28px;
+    fill: #2E5E4E; /* Цвет как у "Гвоздики" — изумрудно-зелёный */
+    transition: transform 0.3s ease;
+  }
 
+  /* Плавное раскрытие текста */
+  .service-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2C2C2C;
+    margin-bottom: 10px;
+  }
+
+  .service-desc {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+
+  /* Активное состояние — при клике */
+  .service-card.active .service-desc {
+    opacity: 1;
+    height: auto;
+    margin-top: 12px;
+  }
+
+  .service-card.active .arrow-icon {
+    transform: rotate(45deg);
+  }
 
 /* ======================================== */
 /* 7. КОНТАКТНАЯ СЕКЦИЯ (форма)             */
@@ -314,62 +407,42 @@ body {
 
 .contact-section {
   width: 100%;
-  margin-top: -45px;
+  margin-top: 45px;
   flex-direction: row;
   overflow: hidden;
-  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
-}
-
-.left-contact {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  padding: 50px 25px;
-  background-color: var(--whiteTextColor);
-  color: var(--blackTextColor);
+justify-content: center;;
+  height: 500px;
+  padding: 15px;
 }
 
 .right-contact {
-  width: 50%;
-  display: flex;
+padding-left: 50px;
+padding-right: 50px;
+border-radius: 20px;
+  justify-content: center;
   flex-direction: column;
-  padding: 50px 0;
-  background-color: var(--blackTextColor);
+  background-image: url(fon.jpg);
   color: var(--whiteTextColor);
 }
 
-.contact-left-title {
-  font-size: 3rem;
-  font-weight: 800;
-}
-
-.info-contact {
-  font-size: 2.5rem;
-  line-height: 1.6;
-  margin-top: 20px;
-}
 
 .contact-right-title {
   font-size: 3.5rem;
   color: var(--whiteTextColor);
   padding: 0 0 0 25px;
+  
 }
 
 .form-container {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 30px 0 0 25px;
-}
 
-.form-img-container {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+width: 100%;
+  padding: 30px 0 0 25px;
 }
 
 .input-container {
   display: flex;
+  
   flex-direction: column;
   margin: 35px 0;
 }
@@ -383,7 +456,8 @@ body {
 }
 
 .input {
-  width: 400px;
+  width: 100%; 
+  max-width: none;
   height: 50px;
   padding: 10px 0;
   font-size: 2rem;
@@ -405,11 +479,6 @@ body {
   color: var(--labelColor);
 }
 
-.contact-img {
-  max-width: 100%;
-  object-fit: cover;
-}
-
 .contact-phone {
   transform: rotate(-2deg);
   margin-top: -150px;
@@ -422,19 +491,20 @@ body {
 .law-section {
   width: 100%;
   padding: 80px 20px;
-  background-color: var(--whiteTextColor);
+  background-color: #ffffff;
   color: var(--blackTextColor);
   display: flex;
   justify-content: center;
   margin: 0 auto;
   margin-top: 60px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
   align-items: center;
   text-align: center;
 }
 
 .law-content {
   display: flex;
+  background-color: #c9c9c923;
   flex-direction: row;
   align-items: center;
   max-width: 1200px;
@@ -442,6 +512,9 @@ body {
   gap: 50px;
   text-align:left;
   justify-content: center;
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+  padding: 30px;
+  border-radius: 20px;
 }
 
 .law-icon-container {
@@ -559,29 +632,29 @@ body {
   margin-top: 20px;
   width: 100%;
   padding: 14px 0;
-  background-color: #a60506;
+  background-color: #2E5E4E;
   color: #fff;
   font-size: 1.8rem;
   font-weight: 600;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(166, 5, 6, 0.4);
+  box-shadow: 0 4px 15px #2E5E4E;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
 }
 
 .contact-form-submit:hover {
-  background-color: #8b0405;
+  background-color: #285042;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(166, 5, 6, 0.5);
+  box-shadow: 0 6px 20px #2E5E4E;
 }
 
 @keyframes pulse-glow {
-  0% { box-shadow: 0 0 10px rgba(166, 5, 6, 0.3); }
-  50% { box-shadow: 0 0 20px rgba(166, 5, 6, 0.6), 0 0 30px rgba(166, 5, 6, 0.4); }
-  100% { box-shadow: 0 0 10px rgba(166, 5, 6, 0.3); }
+  0% { box-shadow: 0 0 10px #2E5E4E; }
+  50% { box-shadow: 0 0 20px #1c382f, 0 0 30px #2E5E4E; }
+  100% { box-shadow: 0 0 10px #264e41; }
 }
 
 .contact-form-submit {
@@ -594,281 +667,444 @@ body {
 
 
 /* ======================================== */
-/* 10. ФУТЕР (подвал)                       */
-/* ======================================== */
+  /* 10. ФУТЕР (подвал)                       */
+  /* ======================================== */
 
-.footer {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  background-color: var(--blackTextColor);
-  margin-top: 30px;
-  padding: 20px 50px;
-}
+  .footer {
+    background-color: #2C2C2C;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'Roboto', Arial, sans-serif;
+  }
 
-.info-footer {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    text-align: left;
+  }
 
-.phone-link {
-  font-size: 2rem;
-  color: var(--whiteTextColor);
-  text-decoration: none;
-  transition: var(--transition);
-}
+  .footer-column {
+    flex: 1;
+    min-width: 280px;
+  }
 
-.phone-link:hover {
-  color: var(--accentColor);
-}
+  .footer-column h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #a8d8a8; /* Мягкий зелёный оттенок — как у "Гвоздики" */
+  }
 
-address {
-  font-size: 2rem;
-  color: var(--whiteTextColor);
-}
+  .footer-column p,
+  .footer-column address {
+    font-size: 1rem;
+    color: #ddd;
+    line-height: 1.6;
+    margin: 0 0 10px;
+    font-style: normal;
+  }
+
+  .footer-column a {
+    color: #a8d8a8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .footer-column a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  /* Кнопка WhatsApp */
+  .footer__phone-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #2E5E4E;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+
+  .footer__phone-btn:hover {
+    background-color: #3a7a60;
+  }
+
+  .whatsapp-icon {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+  }
+
+  /* Политика конфиденциальности */
+  .footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+  }
+
+  .footer-bottom a {
+    color: #a8d8a8;
+    text-decoration: none;
+  }
+
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer-column {
+      align-items: center;
+    }
+
+    .footer__phone-btn {
+      justify-content: center;
+    }
+  }
 
 
 /* ======================================== */
 /* 11. АДАПТИВ (мобильные устройства)       */
 /* ======================================== */
-@media (min-width: 1025px) {
-  .cards-section {
-    justify-content: center;
-  }
 
-  .home-card {
-    flex: 1 1 350px;
-    min-width: 280px;
-    max-width: 350px;
-  }
-  
-
-}
-@media (max-width: 1025px) {
+@media (max-width: 768px) {
+  /* Все основные секции — на всю ширину, без скролла */
+  .home-section,
+  .cards-section,
+  .services-section,
+  .service-process-wrapper,
+  .contact-section,
+  .law-section,
   .footer {
-flex-direction: column;
-    align-items: flex-start;
-    padding: 20px 20px;
-    width: 100%;
-}
-.info-footer {
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  address {
-  font-size: 1.9rem;
-}
-  .header-center-text { display: none;}
-  .header-content { justify-content: center;}
- .header__phone-btn {
-    font-size: 1.6rem;
-    padding: 20px 40px;
-    min-width: 250px;
-    border-radius: 32px;
-    box-shadow: 0 6px 16px rgba(166, 5, 6, 0.45);
-  }
-  .left-contact {
-    display: none;
+    width: 100% !important;
+    max-width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box;
   }
 
-  .form-img-container {
-    display: none;
-  }
-   .form-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-  }
-  .form-img-container {
-    margin-top: 30px;
-    align-items: center;
-  }
-  .input {
-    width: 100%;
-  }
-  .left-contact,
+  /* Уменьшаем паддинги, которые ломают макет */
   .right-contact {
-    width: 100%;
-    padding: 30px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
-}
-@media (max-width: 1750px) {
-  
-  .form-img-container {
-    display: none;
+
+  /* Убеждаемся, что контейнеры не вылезают */
+  .container,
+  .footer-container,
+  .services-grid,
+  .law-content {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    width: 100% !important;
   }
-  
-}
-@media (max-width: 420px) {
-  
- .contact-right-title {
-  font-size: 2.5rem;
-}
+
+  /* Если остался скролл — принудительно скрываем (временно) */
+  body, html {
+    overflow-x: hidden;
+  }
 }
 
 @media (max-width: 768px) {
-  :root { --headerHeight: 100px;}
-  .header-center-text { display: none;}
-  .header-content { justify-content: center;}
-  .header__phone-btn {
-    font-size: 1.3rem;
-    padding: 20px 40px;
-    min-width: 250px;
-    border-radius: 32px;
-    box-shadow: 0 6px 16px rgba(166, 5, 6, 0.45);
+  /* --- Общие настройки --- */
+
+  .home-img-container {
+    flex-direction: column; /* Кнопки в столбик */
+    padding: 0 20px; /* Отступы по бокам */
   }
 
-  .home-section {
-    height: 700px;
-    flex-direction: column;
+  .header__phone-btn2 {
+    width: 100%; /* Кнопки на всю ширину */
+    max-width: 300px; /* Ограничение по ширине, чтобы не быть слишком широкими */
+    margin: 10px 0; /* Убираем горизонтальные отступы, оставляем вертикальные */
     text-align: center;
-    margin-top: 100px;
+  }
+  html, body {
+    font-size: 14px;
+  }
+
+  /* --- Хедер --- */
+  .header {
+    height: 70px;
+  }
+  .header-content {
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: none;
+}
+
+.header__phone-btn {
+  position: static;
+  margin: 0 auto;
+  text-align: center;
+}
+  .header-content {
+    width: 95%;
+  }
+  .header__phone-btn {
+    padding: 10px 16px;
+    font-size: 1.2rem;
+  }
+  .header-center-text {
+    font-size: 1.4rem;
+    padding: 0 10px;
+  }
+.header-center-text {
+  display: none !important;
+}
+.section,
+.home-section,
+.cards-section,
+.services-section,
+.service-process-wrapper,
+.contact-section,
+.law-section,
+.footer {
+  width: 100vw !important;
+  left: 0;
+  right: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+  /* --- Главная секция (hero) --- */
+  .home-section {
+    height: 600px;
+    background-position: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px 0;
   }
   .home-title-container {
     width: 100%;
+    margin-left: 0;
     padding: 0 20px;
-    padding-bottom: 100px;
+    text-align: center;
   }
-  .btn-link {
-    margin: 20px auto;
+  .home-title {
+    font-size: 2.8rem;
+    line-height: 1.2;
+  }
+  .home-subtitle {
+    font-size: 1.4rem;
+  }
+  .home-button {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    padding: 12px 20px;
   }
 
+  /* --- Карточки (4 блока) --- */
   .cards-section {
-    padding: 60px 15px;
-    gap: 25px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
   .home-card {
-    min-width: 100%;
-    max-width: none;
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+  }
+  .home-card h3 {
+    font-size: 1.5rem;
+  }
+  .home-card p {
+    font-size: 1rem;
   }
 
+  /* --- Услуги (интерактивные карточки) --- */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 15px;
+  }
+  .service-card {
+    padding: 25px 20px;
+  }
+  .service-title {
+    font-size: 1.3rem;
+  }
+  .arrow-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* --- Порядок услуг (сервис-процесс) --- */
+  .service-process-wrapper {
+    padding: 0 15px;
+  }
+  .service-process-title {
+    font-size: 2.8rem;
+  }
+  .service-process-subtitle {
+    font-size: 1.1rem;
+  }
+  .step-card {
+    width: 100%;
+    padding: 20px;
+  }
+  .step-card h4 {
+    font-size: 1.3rem;
+  }
+  .step-card .text {
+    font-size: 1rem;
+  }
+
+  /* --- Контактная форма --- */
   .contact-section {
     flex-direction: column;
-    margin-top: 0;
+    height: auto;
+    padding: 40px 20px;
   }
-  .left-contact,
+  .left-contact {
+    display: none;
+  }
   .right-contact {
+    padding: 20px;
+    border-radius: 12px;
+    background-size: cover;
     width: 100%;
-    padding: 30px;
   }
-  .form-container {
+  .contact-right-title {
+    font-size: 2rem;
+  }
+  .contact-form {
+    width: 100%;
+  }
+  .phone-input-wrapper {
+    border-bottom: 2px solid var(--whiteTextColor);
+  }
+  .phone-prefix, .phone-input-field {
+    font-size: 1.6rem;
+  }
+  .contact-form-submit {
+    font-size: 1.5rem;
+    padding: 12px 0;
+  }
+
+  /* --- Закон и доверие --- */
+  .law-content {
     flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  .law-title {
+    font-size: 2.2rem;
+  }
+  .law-icon {
+    width: 80px;
+    height: 80px;
+  }
+  .law-text {
+    font-size: 1.4rem;
+  }
+
+  /* --- Футер --- */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  .footer-column {
     align-items: center;
-    padding: 0;
   }
-  .form-img-container {
-    margin-top: 30px;
-    align-items: center;
+  .footer__phone-btn {
+    justify-content: center;
   }
-  .input {
-    width: 100%;
+  .footer-bottom {
+    text-align: center;
   }
-  .left-contact {
-    display: none;
+  .footer-bottom p {
+    font-size: 0.9rem;
   }
-
-  .form-img-container {
-    display: none;
-  }
-.footer {
-flex-direction: column;
-    align-items: flex-start;
-    padding: 20px 20px;
-    width: 100%;
-
-}
-.info-footer {
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  address {
-  font-size: 1.8rem;
-}
 }
 
-@media (max-width: 585px) {
-  :root { --headerHeight: 76px; }
-  .header__phone-btn {
-    font-size: 1.3rem;
-    padding: 14px 22px;
-    min-width: 200px;
-  }
-  .home-section {
-    margin-top: 70px;
-  }
-  .home-title { font-size: 2.8rem; }
-  .btn-link { font-size: 1.8rem; }
-  .left-contact {
-    display: none;
-  }
-
-  .form-img-container {
-    display: none;
-  }
-.home-title-container {
-  height: 100%;
-  margin-top: 150px;
-  width: 330px;
-  height: 1000%;
-}
-.footer {
-flex-direction: column;
-    align-items: flex-start;
-    padding: 20px 20px;
-    width: 100%;
-
-}
-.info-footer {
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  address {
-  font-size: 1.6rem;
-}
-.contact-right-title {
-  font-size: 2.7rem;
-}
-}
-
+/* --- Дополнительная адаптация для очень маленьких экранов (320–360px) --- */
 @media (max-width: 360px) {
- 
-  .header__phone-btn {
-    font-size: 1.1rem;
-    padding: 12px 20px;
-    min-width: 180px;
+  html, body {
+    font-size: 13px;
   }
-  .left-contact {
-    display: none;
+  .header {
+    height: 60px;
   }
-.contact-form-submit {
-  font-size: 1.5rem;
+  .header-center-text {
+    font-size: 1.2rem;
+  }
+  .home-title {
+    font-size: 2.4rem;
+  }
+  .home-subtitle {
+    font-size: 1.2rem;
+  }
+  .home-button {
+    font-size: 1.2rem;
+    padding: 10px 16px;
+  }
+  .service-process-title {
+    font-size: 2.4rem;
+  }
+  .contact-right-title {
+    font-size: 1.8rem;
+  }
+  .phone-prefix, .phone-input-field {
+    font-size: 1.4rem;
+  }
+  .contact-form-submit {
+    font-size: 1.4rem;
+  }
+  .footer-bottom p {
+    font-size: 0.8rem;
+  }
+
+/* 3. Выравниваем все секции на всю ширину экрана */
+
+
+/* Для контейнеров внутри — ограничение по ширине, но центрирование */
+.container,
+.home-title-container,
+.services-grid,
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
-.contact-right-title {
-  font-size: 2.3rem;
+/* 4. Фикс для main, если он смещён */
+.main {
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
-  .form-img-container {
-    display: none;
-  }
-.footer {
-flex-direction: column;
-    align-items: flex-start;
-    padding: 20px 20px;
-    width: 100%;
 
-}
-.info-footer {
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  address {
-  font-size: 1.2rem;
-}
-.home-title-container {
-  height: 90%;
-  width: 330px;
-  height: 1200px;
+/* 5. Убираем возможные фиксированные отступы слева */
+* {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 }
